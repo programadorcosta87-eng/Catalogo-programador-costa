@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Programador Costa — Soluções em desenvolvimento de sistemas, criação de sites e design gráfico sob encomenda." />
+  <meta name="theme-color" content="#0a0e27" />
+  <title>Programador Costa | Soluções em desenvolvimento de sistemas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-terminal">
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-text" data-text="inicializando sistema..."></span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-text" data-text="carregando módulos..."></span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-text" data-text="otimizando recursos..."></span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-text" data-text="pronto!"></span>
+      </div>
+    </div>
+    <div class="loading-bar">
+      <div class="loading-bar-progress"></div>
+    </div>
+  </div>
+
+  <!-- PARTICLES BACKGROUND -->
+  <div class="particles" id="particles"></div>
+
+  <!-- CURSOR CUSTOMIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- HEADER -->
+  <header class="header header--transparent" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="header__logo glow-effect" aria-label="Programador Costa - Início">
+        <img src="logo.png" alt="Programador Costa - Soluções em desenvolvimento de sistemas" class="logo-img" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link magnetic-link">Início</a></li>
+          <li><a href="#servicos" class="nav__link magnetic-link">Serviços</a></li>
+          <li><a href="#como-funciona" class="nav__link magnetic-link">Como funciona</a></li>
+          <li><a href="#contato" class="nav__link magnetic-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="header__toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="terminal-hero">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <span class="terminal-dot terminal-dot--red"></span>
+              <span class="terminal-dot terminal-dot--yellow"></span>
+              <span class="terminal-dot terminal-dot--green"></span>
+              <span class="terminal-path">programador@costa:~</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line animate-typing">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-text">iniciar_projeto()</span>
+              </div>
+              <div class="terminal-line animate-typing" data-delay="500">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-text">carregar_design("premium")</span>
+              </div>
+              <div class="terminal-line animate-typing" data-delay="1000">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-text">otimizar_performance("max")</span>
+              </div>
+              <div class="terminal-line animate-typing" data-delay="1500">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-text success">✓ sistema pronto para deploy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="hero__tag reveal-on-scroll">// desenvolvimento sob medida</span>
+        
+        <h1 class="hero__title reveal-on-scroll" data-delay="200">
+          Sites e design gráfico<br/>
+          <span class="hero__title--accent gradient-text" id="typewriterText"></span>
+          <span class="cursor-blink">|</span>
+        </h1>
+        
+        <p class="hero__description reveal-on-scroll" data-delay="400">
+          Soluções em desenvolvimento de sistemas. Projetos sob encomenda, com código limpo,
+          design premium e entrega rápida. Do logotipo ao site completo.
+        </p>
+        
+        <div class="hero__actions reveal-on-scroll" data-delay="600">
+          <a href="#servicos" class="btn btn--primary btn--glow magnetic-btn">
+            <span>Ver serviços</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#contato" class="btn btn--ghost magnetic-btn">
+            <span>Falar no Instagram</span>
+          </a>
+        </div>
+
+        <div class="hero__stats reveal-on-scroll" data-delay="800">
+          <div class="stat stat--animated" data-value="100">
+            <span class="stat__number"><span class="counter" data-target="100">0</span>%</span>
+            <span class="stat__label">Sob encomenda</span>
+          </div>
+          <div class="stat stat--animated" data-value="24">
+            <span class="stat__number"><span class="counter" data-target="24">0</span>/<span class="counter" data-target="7">0</span></span>
+            <span class="stat__label">Atendimento digital</span>
+          </div>
+          <div class="stat stat--animated" data-value="10">
+            <span class="stat__number">+<span class="counter" data-target="10">0</span></span>
+            <span class="stat__label">Projetos entregues</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator reveal-on-scroll" data-delay="1000">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Role para baixo</span>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="services" id="servicos">
+    <div class="container">
+      <header class="section-header reveal-on-scroll">
+        <span class="section-header__tag">// o que eu faço</span>
+        <h2 class="section-header__title">Serviços &amp; valores</h2>
+        <p class="section-header__description">
+          Trabalhos realizados sob encomenda, de acordo com a especificação do projeto
+          e a disponibilidade da agenda. Valores de referência abaixo.
+        </p>
+      </header>
+
+      <div class="services__grid">
+
+        <!-- Card 1 -->
+        <article class="service-card card-3d reveal-on-scroll" data-tilt>
+          <div class="card__glow"></div>
+          <figure class="service-card__media">
+            <img class="service-card__img" src="img/logomarca.jpg" alt="Estudo de identidade visual com marcas geométricas em néon" loading="lazy" decoding="async" width="1200" height="750" />
+            <span class="service-card__media-shade" aria-hidden="true"></span>
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+          </div>
+          </figure>
+          <h3 class="service-card__title">Logomarca</h3>
+          <p class="service-card__description">
+            Criação de identidade visual única, com estudo de cores, tipografia e
+            aplicações em diferentes formatos.
+          </p>
+          <div class="service-card__price">
+            <span class="service-card__price--from">a partir de</span>
+            <span class="service-card__price--value">R$ 15</span>
+          </div>
+          <span class="service-card__note">* valor varia conforme complexidade</span>
+          <div class="card__hover-effect">
+            <span class="card__cta">Saiba mais →</span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="service-card card-3d reveal-on-scroll" data-tilt data-delay="100">
+          <div class="card__glow"></div>
+          <figure class="service-card__media">
+            <img class="service-card__img" src="img/cartazes.jpg" alt="Cartazes e flyers coloridos para eventos e festas" loading="lazy" decoding="async" width="1200" height="750" />
+            <span class="service-card__media-shade" aria-hidden="true"></span>
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+          </div>
+          </figure>
+          <h3 class="service-card__title">Cartazes para eventos e festas</h3>
+          <p class="service-card__description">
+            Artes gráficas de alto impacto para divulgação de eventos, festas, shows
+            e campanhas. Prontas para impressão e redes sociais.
+          </p>
+          <div class="service-card__price">
+            <span class="service-card__price--from">a partir de</span>
+            <span class="service-card__price--value">R$ 40</span>
+          </div>
+          <span class="service-card__note">* valor varia conforme complexidade</span>
+          <div class="card__hover-effect">
+            <span class="card__cta">Saiba mais →</span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="service-card service-card--featured card-3d reveal-on-scroll" data-tilt data-delay="200">
+          <span class="service-card__badge pulse-badge">Mais procurado</span>
+          <div class="card__glow"></div>
+          <figure class="service-card__media">
+            <img class="service-card__img" src="img/site-simples.jpg" alt="Layouts de site responsivo em notebook e celular" loading="lazy" decoding="async" width="1200" height="750" />
+            <span class="service-card__media-shade" aria-hidden="true"></span>
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          </figure>
+          <h3 class="service-card__title">Sites Web simples</h3>
+          <p class="service-card__description">
+            Sites institucionais, landing pages e portfólios. Design responsivo,
+            otimizado para SEO e pronto para publicar.
+          </p>
+          <div class="service-card__price">
+            <span class="service-card__price--from">de</span>
+            <span class="service-card__price--value">R$ 1.000 a R$ 2.000</span>
+          </div>
+          <div class="service-card__fee">+ 10% mensal de manutenção</div>
+          <span class="service-card__note">* valor varia conforme especificação</span>
+          <div class="card__hover-effect">
+            <span class="card__cta">Saiba mais →</span>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="service-card card-3d reveal-on-scroll" data-tilt data-delay="300">
+          <div class="card__glow"></div>
+          <figure class="service-card__media">
+            <img class="service-card__img" src="img/site-premium.jpg" alt="Painel administrativo premium com gráficos e camadas 3D" loading="lazy" decoding="async" width="1200" height="750" />
+            <span class="service-card__media-shade" aria-hidden="true"></span>
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          </figure>
+          <h3 class="service-card__title">Sites Web padrão Premium</h3>
+          <p class="service-card__description">
+            Projetos completos com design exclusivo, animações, integrações, painel
+            administrativo e performance de alto nível.
+          </p>
+          <div class="service-card__price">
+            <span class="service-card__price--from">de</span>
+            <span class="service-card__price--value">R$ 2.000 a R$ 5.000</span>
+          </div>
+          <div class="service-card__fee">+ 10% mensal de manutenção</div>
+          <span class="service-card__note">* valor varia conforme especificação</span>
+          <div class="card__hover-effect">
+            <span class="card__cta">Saiba mais →</span>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="services__disclaimer reveal-on-scroll">
+        <strong>Observação:</strong> todos os serviços são feitos <em>sob encomenda</em> e
+        conforme a <em>disponibilidade da agenda</em>. Os valores apresentados são apenas
+        referência — o orçamento final é definido após o alinhamento do escopo do projeto.
+      </p>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="process" id="como-funciona">
+    <div class="process__bg" aria-hidden="true"></div>
+    <div class="container">
+      <header class="section-header reveal-on-scroll">
+        <span class="section-header__tag">// processo</span>
+        <h2 class="section-header__title">Como funciona a encomenda</h2>
+        <p class="section-header__description">
+          Um fluxo direto, sem burocracia. Do primeiro contato à entrega final.
+        </p>
+      </header>
+
+      <div class="process__timeline">
+        <div class="process-step reveal-on-scroll" data-delay="0">
+          <div class="step__number">01</div>
+          <div class="step__content">
+            <h3 class="step__title">Contato inicial</h3>
+            <p class="step__description">
+              Você me chama no Instagram, apresenta a ideia e o objetivo do projeto.
+            </p>
+          </div>
+          <div class="step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="process-step reveal-on-scroll" data-delay="150">
+          <div class="step__number">02</div>
+          <div class="step__content">
+            <h3 class="step__title">Briefing & orçamento</h3>
+            <p class="step__description">
+              Alinhamos escopo, prazos e valores. Tudo documentado de forma clara.
+            </p>
+          </div>
+          <div class="step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="process-step reveal-on-scroll" data-delay="300">
+          <div class="step__number">03</div>
+          <div class="step__content">
+            <h3 class="step__title">Produção</h3>
+            <p class="step__description">
+              Desenvolvimento com atualizações constantes e aprovação em etapas.
+            </p>
+          </div>
+          <div class="step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="process-step reveal-on-scroll" data-delay="450">
+          <div class="step__number">04</div>
+          <div class="step__content">
+            <h3 class="step__title">Entrega & suporte</h3>
+            <p class="step__description">
+              Projeto no ar, com suporte contínuo e manutenção mensal quando aplicável.
+            </p>
+          </div>
+          <div class="step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato">
+    <div class="container contact__inner">
+      <div class="contact__content reveal-on-scroll">
+        <span class="section-header__tag">// vamos conversar</span>
+        <h2 class="contact__title">Pronto para começar<br/>o seu projeto?</h2>
+        <p class="contact__description">
+          Chame diretamente pelo Instagram. Respondo rapidamente e já alinhamos
+          os próximos passos do seu projeto.
+        </p>
+        <div class="contact__links">
+          <a href="https://instagram.com/programadorcosta2026" target="_blank" rel="noopener" class="contact-link magnetic-link">
+            <span class="contact-link__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </span>
+            <span class="contact-link__text">
+              <span class="contact-link__label">Instagram profissional</span>
+              <span class="contact-link__handle">@programadorcosta2026</span>
+            </span>
+            <span class="contact-link__arrow">→</span>
+          </a>
+          <a href="https://instagram.com/adilsoncosta2026" target="_blank" rel="noopener" class="contact-link magnetic-link">
+            <span class="contact-link__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </span>
+            <span class="contact-link__text">
+              <span class="contact-link__label">Instagram pessoal</span>
+              <span class="contact-link__handle">@adilsoncosta2026</span>
+            </span>
+            <span class="contact-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact__visual reveal-on-scroll" data-delay="200" aria-hidden="true">
+        <div class="contact__code">
+          <div class="code-header">
+            <span class="code-dot code-dot--red"></span>
+            <span class="code-dot code-dot--yellow"></span>
+            <span class="code-dot code-dot--green"></span>
+            <span class="code-title">projeto.js</span>
+          </div>
+          <pre><code><span class="code-keyword">const</span> <span class="code-var">projeto</span> = {
+  <span class="code-prop">cliente</span>: <span class="code-string">"você"</span>,
+  <span class="code-prop">objetivo</span>: <span class="code-string">"crescer"</span>,
+  <span class="code-prop">status</span>: <span class="code-string">"em andamento"</span>,
+  <span class="code-prop">prazo</span>: <span class="code-string">"acordado"</span>
+};
+
+<span class="code-keyword">function</span> <span class="code-func">iniciar</span>() {
+  <span class="code-keyword">return</span> <span class="code-string">"vamos lá "</span>;
+}
+
+<span class="code-func">iniciar</span>();</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__bg" aria-hidden="true"></div>
+    <div class="container footer__inner">
+      <div class="footer__brand reveal-on-scroll">
+        <span class="footer__name">Programador Costa</span>
+        <span class="footer__tagline">Soluções em desenvolvimento de sistemas</span>
+      </div>
+      <div class="footer__links reveal-on-scroll" data-delay="100">
+        <a href="#home">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer__social reveal-on-scroll" data-delay="200">
+        <a href="https://instagram.com/programadorcosta2026" target="_blank" rel="noopener" aria-label="Instagram @programadorcosta2026" class="social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <span>@programadorcosta2026</span>
+        </a>
+        <a href="https://instagram.com/adilsoncosta2026" target="_blank" rel="noopener" aria-label="Instagram @adilsoncosta2026" class="social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <span>@adilsoncosta2026</span>
+        </a>
+      </div>
+      <div class="footer__bottom reveal-on-scroll" data-delay="300">
+        <p>© Programador Costa 2026. Todos os direitos reservados.</p>
+        <p class="footer__disclaimer">Serviços sob encomenda — valores e prazos conforme especificação e disponibilidade.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
