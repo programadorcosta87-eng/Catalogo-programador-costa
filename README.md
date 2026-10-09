@@ -2,7 +2,6 @@
 
 Landing page profissional de serviços de desenvolvimento web e design gráfico.
 
-🔗 Acesse o projeto: https://catalogo-programador-costa.lovable.app
 
 ---
 
